@@ -33,7 +33,7 @@ class StoryView
   end
 
   def self.render_story story
-    story.each { |line| p line.sentence }
+    story.each { |line| puts line.sentence }
   end
 end
 
