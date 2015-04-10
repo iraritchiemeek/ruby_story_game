@@ -4,7 +4,7 @@ require_relative '../../db/config'
 class Story < ActiveRecord::Base
   attr_reader :finished
 
-  validates :sentence, length: { maximum: 140 }
+  # validates :sentence, length: { maximum: 140 }
 
 
   def finished?(sentence)

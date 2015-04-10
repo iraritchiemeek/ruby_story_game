@@ -1,5 +1,6 @@
 require_relative '../../config/application'
 require_relative '../views/story_view.rb'
+require 'io/console'
 
 class StoryController
 
@@ -14,7 +15,8 @@ class StoryController
   end
 
   def get_sentence
-    input = gets.chomp
+    input = STDIN.noecho(&:gets)
+    input = input.chomp
     Story.create(sentence: input)
     @model.finished?(input)
     puts "\e[H\e[2J"
