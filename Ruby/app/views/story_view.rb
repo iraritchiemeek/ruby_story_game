@@ -28,7 +28,7 @@ class StoryView
   end
 
   def self.render_prompt end_word
-    puts "Is the next fantabulous typist ready? The last sentence ended: ... '#{end_word}'."
+    puts "Is the next fantabulous typist ready? The last sentence was: '#{end_word}'."
     puts
   end
 
