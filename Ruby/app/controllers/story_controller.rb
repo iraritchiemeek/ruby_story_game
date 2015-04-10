@@ -1,4 +1,4 @@
-
+require_relative '../../config/application'
 require_relative '../views/story_view.rb'
 
 class StoryController
@@ -14,7 +14,8 @@ class StoryController
 
   def get_sentence
     input = gets.chomp
+    @model.add_sentence(input)
     @model.finished?(input)
-    @view.render_prompt
+    @view.render_prompt(@model.end_word)
   end
 end
