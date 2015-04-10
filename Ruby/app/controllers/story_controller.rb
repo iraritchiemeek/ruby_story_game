@@ -6,6 +6,7 @@ class StoryController
   def initialize
     @view = StoryView.new
     @model = Story.new
+    Story.destroy_all
     @view.render_instructions
     @view.render_start
     get_sentence until @model.finished?
@@ -14,7 +15,7 @@ class StoryController
 
   def get_sentence
     input = gets.chomp
-    @model.add_sentence(input)
+    Story.create(sentence: input)
     @model.finished?(input)
     @view.render_prompt(@model.end_word(input))
   end
