@@ -16,12 +16,14 @@ class StoryView
     puts
     puts "String together any sentence you choose. Each person must contribute a sentence to the string.\nOthers, don't look when you're not typing!"
     puts
+    puts "Each sentence may be no more than 140 characters."
+    puts
     puts "When you want to end your story simply type 'the end' to read the sum of your highly dubious input."
   end
 
   def self.render_start
     puts
-    puts "The first excellently creative mind should add their contribute their sentence here: "
+    puts "The first excellently creative mind should contribute their sentence here: "
     puts
   end
 
