@@ -16,6 +16,6 @@ class StoryController
     input = gets.chomp
     @model.add_sentence(input)
     @model.finished?(input)
-    @view.render_prompt(@model.end_word)
+    @view.render_prompt(@model.end_word(input))
   end
 end
